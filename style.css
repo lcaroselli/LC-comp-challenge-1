@@ -1,0 +1,79 @@
+body {
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  color: #63402F;
+  font-family: arial, sans-serif;
+  height: 900px;
+  width: 900px;
+  letter-spacing: 3px;
+  margin: 0;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+p:hover {
+  cursor: pointer;
+}
+
+
+/*Colors & Sizes - using classes*/
+.lightblue-rectangle, .lightblue-square {
+  background-color: #ACD7E5;
+  border: 1px solid black; /*TEMPORARY*/
+}
+
+.grey-square {
+  background-color: #CBD6CD;
+}
+
+.paynesgrey-square {
+  background-color: #70B2B5;
+}
+
+.rose-square {
+  background-color: #E2BEBE;
+}
+
+.lace-square {
+  background-color: #CEC9A5;
+}
+
+.lightblue-square, .grey-square, .paynesgrey-square, .rose-square, .lace-square {
+  border: 1px solid black; /*TEMPORARY*/
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+}
+
+.lightblue-rectangle {
+  display: inline-block;
+  height:150px;
+  width: 400px;
+}
+
+
+
+
+/*Positioning - using Ids*/
+#character-name {
+  font-size: 30px;
+  margin: 15px 0 0 15px;
+  padding-top: 12px;
+}
+
+#character-name-text {
+  font-size: 12px;
+  margin: 15px 0 0 15px;
+  text-shadow: none;
+}
+
+.square-title {
+  font-size: 18px;
+}
+
+
+
+#rick-pic {
+  border: 1px solid black;
+  height: 449px;
+  width: 330px;
+}

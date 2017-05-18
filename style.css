@@ -1,14 +1,12 @@
 body {
   background-color: #FFFFFF;
-  box-sizing: border-box;
-  color: #63402F;
+  color: #000154;
   font-family: arial, sans-serif;
-  height: 900px;
-  width: 900px;
+  width: 100%;
   letter-spacing: 3px;
   margin: 0;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
+
 
 p:hover {
   cursor: pointer;
@@ -17,28 +15,26 @@ p:hover {
 
 /*Colors & Sizes - using classes*/
 .lightblue-rectangle, .lightblue-square {
-  background-color: #ACD7E5;
-  border: 1px solid black; /*TEMPORARY*/
+  background-color: #00A6B7;
 }
 
 .grey-square {
-  background-color: #CBD6CD;
+  background-color: #00FAC6;
 }
 
 .paynesgrey-square {
-  background-color: #70B2B5;
+  background-color: #8EFA42;
 }
 
 .rose-square {
-  background-color: #E2BEBE;
+  background-color: #F95040;
 }
 
 .lace-square {
-  background-color: #CEC9A5;
+  background-color: #004675;
 }
 
 .lightblue-square, .grey-square, .paynesgrey-square, .rose-square, .lace-square {
-  border: 1px solid black; /*TEMPORARY*/
   display: inline-block;
   height: 200px;
   width: 200px;
@@ -46,33 +42,67 @@ p:hover {
 
 .lightblue-rectangle {
   display: inline-block;
-  height:150px;
-  width: 400px;
+  height:200px;
+  padding: 0 0 0 10px;
+  width: 450px;
 }
-
-
 
 
 /*Positioning - using Ids*/
 #character-name {
   font-size: 30px;
-  margin: 15px 0 0 15px;
+  margin: 5px 0 0 15px;
   padding-top: 12px;
 }
 
 #character-name-text {
   font-size: 12px;
-  margin: 15px 0 0 15px;
-  text-shadow: none;
+  margin: 5px 0 0 15px;
+}
+
+#profile img, #experience img, #education img, #blog img, #social-menu img, #contact img, #portfolio img{
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin: auto;
+  padding: 20px;
+}
+
+#resume-button, #contact-button {
+  background-color: #CAEBF2;
+  border: 2px solid white;
+  border-radius: 20%;
+  color: #63402F;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px 0 0 15px;
+  padding: 10px;
+  width: 90px;
+}
+
+#resume-button:hover, #contact-button:hover {
+  background-color: #70B2B5;
 }
 
 .square-title {
-  font-size: 18px;
+  font-size: 14px;
+  text-align: center;
 }
 
+#wrapper-1 {
+  display: inline-block;
+  height: 100%;
+  width: 60%;
+}
 
+#wrapper-2 {
+  display: inline-block;
+  height: 100%;
+  width: 39%;
+}
 
 #rick-pic {
+  background-color: #8EFA42;
   border: 1px solid black;
   height: 449px;
   width: 330px;

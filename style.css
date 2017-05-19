@@ -1,17 +1,41 @@
 body {
-  background-color: #FFFFFF;
+  box-sizing: border-box;
   color: #000154;
+  display: flex;
   font-family: arial, sans-serif;
-  width: 100%;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   margin: 0;
+  overflow: hidden;
+  width: 100%;
 }
-
 
 p:hover {
   cursor: pointer;
 }
 
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container-1 {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: flex-start;
+  margin: 0;
+  vertical-align: top;
+  width: 70%;
+}
+
+#container-2 {
+  box-sizing: border-box;
+  display: inline-flex;
+  height:100%;
+  margin: 0 0 0 -9px;
+  width: 30%;
+}
 
 /*Colors & Sizes - using classes*/
 .lightblue-rectangle, .lightblue-square {
@@ -32,32 +56,42 @@ p:hover {
 
 .lace-square {
   background-color: #004675;
+  text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
 }
+
+
 
 .lightblue-square, .grey-square, .paynesgrey-square, .rose-square, .lace-square {
   display: inline-block;
   height: 200px;
-  width: 200px;
+  margin: 0;
+  overflow: scroll;
+  width: 33%;
 }
 
 .lightblue-rectangle {
   display: inline-block;
-  height:200px;
-  padding: 0 0 0 10px;
-  width: 450px;
+  height: 200px;
+  margin: 0;
+  width: 66%;
 }
 
 
-/*Positioning - using Ids*/
-#character-name {
-  font-size: 30px;
+.lightblue-rectangle {
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 25px;
   margin: 5px 0 0 15px;
   padding-top: 12px;
+  text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
 }
 
 #character-name-text {
   font-size: 12px;
   margin: 5px 0 0 15px;
+  overflow: hidden;
 }
 
 #profile img, #experience img, #education img, #blog img, #social-menu img, #contact img, #portfolio img{
@@ -68,6 +102,7 @@ p:hover {
   padding: 20px;
 }
 
+/*BUTTONS NEED AN IMAGE*/
 #resume-button, #contact-button {
   background-color: #CAEBF2;
   border: 2px solid white;
@@ -76,12 +111,13 @@ p:hover {
   cursor: pointer;
   font-size: 16px;
   margin: 20px 0 0 15px;
-  padding: 10px;
+  padding: 3px;
   width: 90px;
 }
 
 #resume-button:hover, #contact-button:hover {
-  background-color: #70B2B5;
+  background-color: #004675;
+  color: white;
 }
 
 .square-title {
@@ -89,21 +125,9 @@ p:hover {
   text-align: center;
 }
 
-#wrapper-1 {
-  display: inline-block;
-  height: 100%;
-  width: 60%;
-}
-
-#wrapper-2 {
-  display: inline-block;
-  height: 100%;
-  width: 39%;
-}
-
 #rick-pic {
   background-color: #8EFA42;
   border: 1px solid black;
-  height: 449px;
-  width: 330px;
+  width: 100%;
+  height: 100%;
 }

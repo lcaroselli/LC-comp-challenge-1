@@ -1,11 +1,16 @@
+html {
+  height: 100%;
+  margin: 0;
+}
+
 body {
-  box-sizing: border-box;
   color: #000154;
   display: flex;
   font-family: arial, sans-serif;
+  height: 100%;
   letter-spacing: 4px;
   margin: 0;
-  overflow: hidden;
+  /*overflow: hidden;*/
   width: 100%;
 }
 
@@ -15,27 +20,34 @@ p:hover {
 
 .main-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-right: -10px;
 }
 
 .container-1 {
-  box-sizing: border-box;
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
-  height: 100%;
-  justify-content: flex-start;
-  margin: 0;
-  vertical-align: top;
-  width: 70%;
+  width: 65%;
 }
 
 #container-2 {
-  box-sizing: border-box;
-  display: inline-flex;
-  height:100%;
-  margin: 0 0 0 -9px;
-  width: 30%;
+  background-color: #8EFA42;
+  display: flex;
+  height: 100%;
+  margin-left: -12px;
+  width: 50%;
 }
+
+#container-2 img {
+  height: 649px;
+  margin: auto;
+  width: 477px;
+}
+
+.lightblue-rectangle img {
+  display: none;
+}
+
 
 /*Colors & Sizes - using classes*/
 .lightblue-rectangle, .lightblue-square {
@@ -59,60 +71,58 @@ p:hover {
   text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
 }
 
-
-
 .lightblue-square, .grey-square, .paynesgrey-square, .rose-square, .lace-square {
-  display: inline-block;
-  height: 200px;
   margin: 0;
   overflow: scroll;
   width: 33%;
 }
 
 .lightblue-rectangle {
-  display: inline-block;
-  height: 200px;
   margin: 0;
+  overflow: hidden;
   width: 66%;
 }
 
-
-.lightblue-rectangle {
-  overflow: hidden;
-}
-
 h1 {
-  font-size: 25px;
-  margin: 5px 0 0 15px;
-  padding-top: 12px;
+  font-size: 30px;
+  margin: 30px 0 20px 15px;
+  padding: 12px;
   text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
 }
 
 #character-name-text {
-  font-size: 12px;
-  margin: 5px 0 0 15px;
+  font-size: 18px;
+  margin: 0 20px 20px 20px;
+  padding-left: 12px;
   overflow: hidden;
 }
 
 #profile img, #experience img, #education img, #blog img, #social-menu img, #contact img, #portfolio img{
-  height: 70px;
-  width: 70px;
   display: block;
+  height: 80px;
   margin: auto;
-  padding: 20px;
+  padding: 30px;
+  width: 80px;
 }
 
-/*BUTTONS NEED AN IMAGE*/
 #resume-button, #contact-button {
-  background-color: #CAEBF2;
-  border: 2px solid white;
-  border-radius: 20%;
-  color: #63402F;
+  background-color: #00A6B7;
+  border: 1px solid white;
+  border-radius: 10%;
   cursor: pointer;
-  font-size: 16px;
-  margin: 20px 0 0 15px;
-  padding: 3px;
-  width: 90px;
+  display: inline-block;
+  font-size: 18px;
+  height: 70px;
+  margin: 20px 0 30px 25px;
+  width: 150px;
+}
+
+#resume-button img, #contact-button img {
+  display: inline-block;
+  height: 40px;
+  float: left;
+  padding: 10px;
+  width: 40px;
 }
 
 #resume-button:hover, #contact-button:hover {
@@ -125,9 +135,77 @@ h1 {
   text-align: center;
 }
 
-#rick-pic {
-  background-color: #8EFA42;
-  border: 1px solid black;
-  width: 100%;
-  height: 100%;
+
+
+
+
+
+/*Media Queries*/
+@media screen and (max-width: 1300px) {
+  h1 {
+    font-size: 25px;
+    margin-top: 15px;
+  }
+
+  #character-name-text {
+    font-size: 14px;
+    margin: 20px 0;
+    padding: 10px;
+  }
+
+.lightblue-square, .grey-square, .paynesgrey-square, .rose-square, .lace-square {
+    display: flex;
+    margin: 0;
+    overflow: visible;
+    width: 33.33%;
 }
+
+#portfolio {
+  display: block;
+  border-top: 1px solid teal;
+  width: 100%;
+}
+
+.lightblue-rectangle {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.lightblue-rectangle img {
+  border-bottom: 1px solid white;
+  display: block;
+  margin: auto;
+  width: 100%;
+}
+
+#resume-button, #contact-button {
+  font-size: 14px;
+  height: 48px;
+  margin: 20px 30px 20px 0px;
+  width: 150px;
+}
+
+#resume-button img, #contact-button img {
+  border-bottom: none;
+  display: inline-block;
+  height: 20px;
+  padding: 10px;
+  width: 20px;
+}
+
+.container-1 {
+  width: 100%;
+}
+#container-2 {
+  width: 0px;
+}
+
+#container-2 img {
+  display: none;
+}
+
+
+}
+
+/* 2nd - MOBILE - border radius icon rick in name block, and then make horizontal row blocks for each thing

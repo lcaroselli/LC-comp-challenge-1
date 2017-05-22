@@ -1,61 +1,30 @@
-html {
-  height: 100%;
-  margin: 0;
+* {
+  box-sizing: border-box;
 }
 
 body {
   color: #000154;
   display: flex;
   font-family: arial, sans-serif;
-  height: 100%;
   letter-spacing: 4px;
   margin: 0;
-  /*overflow: hidden;*/
   width: 100%;
 }
 
-p:hover {
-  cursor: pointer;
-}
-
-.main-container {
-  display: flex;
-  justify-content: flex-start;
-  margin-right: -10px;
-}
-
-.container-1 {
-  display: flex;
-  flex-wrap: wrap;
-  width: 65%;
-}
-
-#container-2 {
-  background-color: #8EFA42;
-  display: flex;
-  height: 100%;
-  margin-left: -12px;
-  width: 50%;
-}
-
-#container-2 img {
-  height: 649px;
-  margin: auto;
-  width: 477px;
-}
-
-.lightblue-rectangle img {
-  display: none;
-}
 
 
-/*Colors & Sizes - using classes*/
-.lightblue-rectangle, .lightblue-square {
-  background-color: #00A6B7;
-}
-
+/* Box Colors */
 .grey-square {
   background-color: #00FAC6;
+}
+
+.lace-square {
+  background-color: #004675;
+  text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
+}
+
+.lightblue-rectangle, .lightblue-square {
+  background-color: #00A6B7;
 }
 
 .paynesgrey-square {
@@ -66,68 +35,124 @@ p:hover {
   background-color: #F95040;
 }
 
-.lace-square {
-  background-color: #004675;
-  text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
+
+
+/* Main layout ccontrols */
+.main-container {
+  display: flex;
+  justify-content: center;
 }
 
-.lightblue-square, .grey-square, .paynesgrey-square, .rose-square, .lace-square {
+.container-1 {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 60%;
+}
+
+#container-2 {
+  align-items: center;
+  background-color: #8EFA42;
+  display: flex;
+  height: 100vh;
+  margin-left: -9px;
+  width: 40%;
+}
+
+
+
+/* Box layout controls */
+.grey-square, .lace-square, .lightblue-square, .paynesgrey-square, .rose-square {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  height: 33.33vh;
+  justify-content: center;
   margin: 0;
-  overflow: scroll;
-  width: 33%;
+  min-width: 33.33%;
 }
 
 .lightblue-rectangle {
+  display: inline-block;
+  height: 33.33vh;
   margin: 0;
-  overflow: hidden;
-  width: 66%;
+  max-width: 66.33%;
 }
 
-h1 {
-  font-size: 30px;
-  margin: 30px 0 20px 15px;
-  padding: 12px;
-  text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
-}
 
-#character-name-text {
-  font-size: 18px;
-  margin: 0 20px 20px 20px;
-  padding-left: 12px;
-  overflow: hidden;
-}
 
-#profile img, #experience img, #education img, #blog img, #social-menu img, #contact img, #portfolio img{
+/* Image controls */
+#blog img, #contact img, #education img, #experience img, #portfolio img, #profile img, #social-menu img {
   display: block;
-  height: 80px;
+  height: 30%;
   margin: auto;
   padding: 30px;
-  width: 80px;
+  width: 90%;
 }
 
-#resume-button, #contact-button {
+#container-2 img {
+  height: 649px;
+  margin: auto;
+  width: 477px;
+}
+
+#rickIcon {
+  display: none;
+}
+
+
+
+/* Buttons */
+.button-container {
+  margin: 0;
+}
+
+#resume-button , #contact-button {
   background-color: #00A6B7;
   border: 1px solid white;
-  border-radius: 10%;
+  border-radius: 20%;
   cursor: pointer;
-  display: inline-block;
-  font-size: 18px;
-  height: 70px;
-  margin: 20px 0 30px 25px;
-  width: 150px;
+  font-size: 17px;
+  height: 50px;
+  margin: 0px 40px;
+  padding-bottom: 0px;
+  text-align: center;
+  width: 130px;
 }
 
 #resume-button img, #contact-button img {
   display: inline-block;
-  height: 40px;
   float: left;
-  padding: 10px;
-  width: 40px;
+  height: 25px;
+  padding: 2px;
+  width: 25px;
 }
 
 #resume-button:hover, #contact-button:hover {
   background-color: #004675;
   color: white;
+}
+
+
+
+/* Inner text element controls */
+#character-name-text {
+  font-size: 18px;
+  margin: 10px 90px 20px 40px;
+  min-width: 66.666%;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 20px 40px;
+  text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
+}
+
+p:hover {
+  cursor: pointer;
 }
 
 .square-title {
@@ -137,75 +162,135 @@ h1 {
 
 
 
-
-
-
 /*Media Queries*/
 @media screen and (max-width: 1300px) {
-  h1 {
-    font-size: 25px;
-    margin-top: 15px;
-  }
-
   #character-name-text {
     font-size: 14px;
-    margin: 20px 0;
-    padding: 10px;
+    margin: auto;
+    width: 60%;
   }
 
-.lightblue-square, .grey-square, .paynesgrey-square, .rose-square, .lace-square {
+  .container-1 {
+    width: 100%;
+  }
+
+  #container-2 {
+    width: 0px;
+  }
+
+  #container-2 img {
+    display: none;
+  }
+
+  #contact-button, #resume-button {
+    font-size: 15px;
+    height: 40px;
+    margin: 20px 30px 20px 0px;
+  }
+
+  .grey-square, .lace-square, .lightblue-square, .paynesgrey-square, .rose-square {
     display: flex;
+    height: 33.33vh;
     margin: 0;
     overflow: visible;
     width: 33.33%;
-}
+  }
 
-#portfolio {
-  display: block;
-  border-top: 1px solid teal;
-  width: 100%;
-}
+  h1 {
+    display: inline-block;
+    font-size: 35px;
+    margin: auto;
+    word-spacing: 10px;
+  }
 
-.lightblue-rectangle {
-  margin: 0;
-  text-align: center;
-  width: 100%;
-}
+  .lightblue-rectangle {
+    height: 40vh;
+    text-align: center;
+    width: 66.66vw;
+  }
 
-.lightblue-rectangle img {
-  border-bottom: 1px solid white;
-  display: block;
-  margin: auto;
-  width: 100%;
-}
+  #profile {
+    height: 40vh;
+  }
 
-#resume-button, #contact-button {
-  font-size: 14px;
-  height: 48px;
-  margin: 20px 30px 20px 0px;
-  width: 150px;
-}
-
-#resume-button img, #contact-button img {
-  border-bottom: none;
-  display: inline-block;
-  height: 20px;
-  padding: 10px;
-  width: 20px;
-}
-
-.container-1 {
-  width: 100%;
-}
-#container-2 {
-  width: 0px;
-}
-
-#container-2 img {
-  display: none;
+  #rickIcon {
+    background-color: white;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    display: block;
+    height: 70px;
+    margin: 10px auto;
+    width: 70px;
+  }
 }
 
 
+/* Small + Mobile */
+@media screen and (max-width: 950px) {
+  .container-1 {
+    height: 100vh;
+  }
+
+  .lightblue-rectangle {
+    height: 15vh;
+    min-width: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin-top: 20px;
+    word-spacing: 10px;
+  }
+
+  #rickIcon {
+    float: left;
+    margin: 20px 30px;
+  }
+
+  #resume-button, #contact-button {
+    display: none;
+  }
+
+  .grey-square, .lace-square, .lightblue-square, .paynesgrey-square, #profile, .rose-square {
+    border: 1px solid yellow;
+    justify-content: flex-start;
+    height: 13vh;
+    min-width: 100%;
+    overflow: visible;
+  }
+
+  #blog img, #contact img, #education img, #experience img, #portfolio img, #profile img, #social-menu img {
+    display: none;
+  }
+
+  .square-title {
+    font-size: 18px;
+    margin-left: 30px;
+  }
+
+  html {
+    height: 100vh;
+  }
 }
 
-/* 2nd - MOBILE - border radius icon rick in name block, and then make horizontal row blocks for each thing
+
+/* All phones */
+@media screen and (max-width: 540px) {
+  .lightblue-rectangle {
+    height: 8vh;
+    min-width: 100%;
+  }
+
+  h1 {
+    margin-top: 20px;
+  }
+
+  .square-title {
+    margin: auto;
+  }
+
+  #rickIcon, #resume-button , #character-name-text, #contact-button {
+    display: none;
+  }
+
+}

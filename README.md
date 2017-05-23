@@ -1,9 +1,25 @@
 # Static Comp Challenge 1
 
-![Screenshot 1](shot1.png?raw=true "Screenshot of comp")
+## Challenge
+Recreate the static comp and make it responsive.
 
-![Screenshot 2](/shot2.png?raw=true "Screenshot of comp")
+## Requirements
+1. Do not change the LAYOUT
+2. You may NOT take liberties with the layout, but your creative license includes:
+* Copy
+* Images
+* Icons
+* Color palette
 
-![Screenshot 3](/shot3.png?raw=true "Screenshot of comp")
+## Original
+![Original Comp](assets/screenshots/original.png?raw=true)
 
-![Screenshot 4](/shot4.png?raw=true "Screenshot of comp")
+## My Version (normal)
+![Screenshot 1](assets/screenshots/shot1.png?raw=true)
+
+## Additional breakpoints
+![Screenshot 2](assets/screenshots/shot2.png?raw=true)
+
+![Screenshot 3](assets/screenshots/shot3.png?raw=true)
+
+![Screenshot 4](assets/screenshots/shot4.png?raw=true)

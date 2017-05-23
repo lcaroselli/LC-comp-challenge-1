@@ -12,7 +12,6 @@ body {
 }
 
 
-
 /* Box Colors */
 .grey-square {
   background-color: #00FAC6;
@@ -35,6 +34,96 @@ body {
   background-color: #F95040;
 }
 
+
+/* Box Images */
+#blog {
+  background-image: url(assets/alien.png);
+}
+
+#contact {
+  background-image: url(assets/atom.png);
+}
+
+#education {
+  background-image: url(assets/flasks.png);
+}
+
+#experience {
+  background-image: url(assets/ufo.png);
+}
+
+#portfolio {
+  background-image: url(assets/pint.png);
+}
+
+#profile {
+  background-image: url(assets/scientist.png);
+}
+
+#social-menu {
+  background-image: url(assets/gun-blaster.png);
+}
+
+.grey-square, .lace-square, .lightblue-square, .paynesgrey-square, .rose-square {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: local;
+  padding-top: 180px;
+}
+
+
+/* Carousel button controls */
+.tick-1, .tick-2, .tick-3 {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+}
+
+.tick-1, .tick-2, .left-arrow, .right-arrow {
+  background-color: rgba(38, 12, 12, 0.3);
+}
+
+.tick-1 {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.tick-2 {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+}
+
+.tick-3 {
+  background-color: rgba(255, 255, 255, 0.87);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.left-arrow, .right-arrow {
+  border: 1px solid black;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 35px;
+  height: 40px;
+  text-align: center;
+  width: 40px;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 45%;
+  left: 61%;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 45%;
+  left: 96%;
+}
 
 
 /* Main layout ccontrols */
@@ -62,7 +151,6 @@ body {
 }
 
 
-
 /* Box layout controls */
 .grey-square, .lace-square, .lightblue-square, .paynesgrey-square, .rose-square {
   align-items: center;
@@ -78,30 +166,21 @@ body {
   display: inline-block;
   height: 33.33vh;
   margin: 0;
-  max-width: 66.33%;
+  max-width: 66.6%;
 }
 
 
 
 /* Image controls */
-#blog img, #contact img, #education img, #experience img, #portfolio img, #profile img, #social-menu img {
-  display: block;
-  height: 30%;
-  margin: auto;
-  padding: 30px;
-  width: 90%;
-}
-
 #container-2 img {
   height: 649px;
   margin: auto;
   width: 477px;
 }
 
-#rickIcon {
+#rickIcon, #resumeIcon2, #contactIcon2 {
   display: none;
 }
-
 
 
 /* Buttons */
@@ -136,7 +215,6 @@ body {
 }
 
 
-
 /* Inner text element controls */
 #character-name-text {
   font-size: 18px;
@@ -161,11 +239,10 @@ p:hover {
 }
 
 
-
 /*Media Queries*/
 @media screen and (max-width: 1300px) {
   #character-name-text {
-    font-size: 14px;
+    font-size: 13px;
     margin: auto;
     width: 60%;
   }
@@ -182,10 +259,14 @@ p:hover {
     display: none;
   }
 
+  .left-arrow, .right-arrow, .tick-1, .tick-2, .tick-3 {
+    display: none;
+  }
+
   #contact-button, #resume-button {
     font-size: 15px;
     height: 40px;
-    margin: 20px 30px 20px 0px;
+    margin: 10px 30px 0px 0px;
   }
 
   .grey-square, .lace-square, .lightblue-square, .paynesgrey-square, .rose-square {
@@ -204,13 +285,13 @@ p:hover {
   }
 
   .lightblue-rectangle {
-    height: 40vh;
+    height: 33.34%;
+    padding-top: 20px;
     text-align: center;
-    width: 66.66vw;
   }
 
   #profile {
-    height: 40vh;
+    height: 33.34%;
   }
 
   #rickIcon {
@@ -225,26 +306,44 @@ p:hover {
 }
 
 
-/* Small + Mobile */
-@media screen and (max-width: 950px) {
+/* Medium */
+@media screen and (max-width: 1045px) {
   .container-1 {
     height: 100vh;
   }
 
   .lightblue-rectangle {
-    height: 15vh;
+    height: 12.5%;
     min-width: 100%;
   }
 
   h1 {
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
     word-spacing: 10px;
   }
 
   #rickIcon {
-    float: left;
-    margin: 20px 30px;
+    position: absolute;
+    top: 0;
+    left: 30px;
+  }
+
+  #resumeIcon2 {
+    display: block;
+    padding-right: 20px;
+    position: absolute;
+    right: 60px;
+    top: 35px;
+  }
+
+  #contactIcon2 {
+    display: block;
+    padding-right: 20px;
+    position: absolute;
+    right: 20px;
+    top: 35px;
   }
 
   #resume-button, #contact-button {
@@ -252,21 +351,17 @@ p:hover {
   }
 
   .grey-square, .lace-square, .lightblue-square, .paynesgrey-square, #profile, .rose-square {
-    border: 1px solid yellow;
+    display: flex;
     justify-content: flex-start;
-    height: 13vh;
+    height: 12.5%;
     min-width: 100%;
     overflow: visible;
-  }
+      /* Box images */
+      background-position: 95% 50%;
+      background-size: 80px;
+      padding: 50px 60px;
+    }
 
-  #blog img, #contact img, #education img, #experience img, #portfolio img, #profile img, #social-menu img {
-    display: none;
-  }
-
-  .square-title {
-    font-size: 18px;
-    margin-left: 30px;
-  }
 
   html {
     height: 100vh;
@@ -275,14 +370,10 @@ p:hover {
 
 
 /* All phones */
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 700px) {
   .lightblue-rectangle {
-    height: 8vh;
+    height: 13vh;
     min-width: 100%;
-  }
-
-  h1 {
-    margin-top: 20px;
   }
 
   .square-title {
@@ -293,4 +384,25 @@ p:hover {
     display: none;
   }
 
+  #resumeIcon2 {
+    top: 13px;
+  }
+
+  #contactIcon2 {
+    top: 13px;
+  }
+
+
+/* Smaller */
+@media screen and (max-width: 499px) {
+  #blog, #contact, #education, #experience, #portfolio, #profile, #social-menu {
+    background-image: none;
 }
+
+#resumeIcon2, #contactIcon2 {
+  display: none;
+}
+
+  h1 {
+  margin-left: 20px;
+  }

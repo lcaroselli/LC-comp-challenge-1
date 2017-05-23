@@ -3,35 +3,27 @@
 }
 
 body {
-  color: #000154;
-  display: flex;
+  color: #0D1321;
   font-family: arial, sans-serif;
-  letter-spacing: 4px;
   margin: 0;
-  width: 100%;
 }
 
 
 /* Box Colors */
-.grey-square {
-  background-color: #00FAC6;
-}
-
-.lace-square {
-  background-color: #004675;
-  text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
+.grey-square, .lace-square {
+  background-color: #536775;
 }
 
 .lightblue-rectangle, .lightblue-square {
-  background-color: #00A6B7;
+  background-color: #AFE0CE;
 }
 
 .paynesgrey-square {
-  background-color: #8EFA42;
+  background-color: #C5D86D;
 }
 
 .rose-square {
-  background-color: #F95040;
+  background-color: #86615C;
 }
 
 
@@ -143,7 +135,7 @@ body {
 
 #container-2 {
   align-items: center;
-  background-color: #8EFA42;
+  background-color: #C5D86D;
   display: flex;
   height: 100vh;
   margin-left: -9px;
@@ -163,10 +155,9 @@ body {
 }
 
 .lightblue-rectangle {
-  display: inline-block;
   height: 33.33vh;
   margin: 0;
-  max-width: 66.6%;
+  width: 66.6%;
 }
 
 
@@ -185,40 +176,41 @@ body {
 
 /* Buttons */
 .button-container {
-  margin: 0;
+  display: inline-flex;
+  margin-left: 40px;
 }
 
 #resume-button , #contact-button {
-  background-color: #00A6B7;
-  border: 1px solid white;
-  border-radius: 20%;
+  background-color: #77A594;
+  border: 3px solid white;
   cursor: pointer;
-  font-size: 17px;
-  height: 50px;
-  margin: 0px 40px;
-  padding-bottom: 0px;
+  font-size: 14px;
+  height: 35px;
+  margin-right: 20px;
   text-align: center;
   width: 130px;
 }
 
+#resume-button p, #contact-button p {
+  margin-top: -17px;
+}
+
 #resume-button img, #contact-button img {
-  display: inline-block;
-  float: left;
-  height: 25px;
-  padding: 2px;
-  width: 25px;
+  display: block;
+  margin: 5px 0 0 5px;
+  width: 20px;
 }
 
 #resume-button:hover, #contact-button:hover {
-  background-color: #004675;
-  color: white;
+  background-color: rgba(38, 12, 12, 0.3);
 }
 
 
 /* Inner text element controls */
 #character-name-text {
   font-size: 18px;
-  margin: 10px 90px 20px 40px;
+  line-height: 40px;
+  margin: 10px 40px 20px 45px;
   min-width: 66.666%;
   overflow: hidden;
 }
@@ -226,7 +218,6 @@ body {
 h1 {
   font-size: 50px;
   margin: 20px 40px;
-  text-shadow: -1px 0 #8EFA42, 0 1px #8EFA42, 1px 0 #8EFA42, 0 -1px #8EFA42;
 }
 
 p:hover {
@@ -234,7 +225,7 @@ p:hover {
 }
 
 .square-title {
-  font-size: 14px;
+  font-size: 22px;
   text-align: center;
 }
 
@@ -296,7 +287,7 @@ p:hover {
 
   #rickIcon {
     background-color: white;
-    border: 2px solid yellow;
+    border: 2px solid #536775;
     border-radius: 50%;
     display: block;
     height: 70px;
